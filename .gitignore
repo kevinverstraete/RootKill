@@ -1,0 +1,8 @@
+Demo/RootKill.Logitech.Lcd.UI/bin/
+Demo/RootKill.Logitech.Lcd.UI/obj/
+RootKill.Config/bin/
+RootKill.Config/obj/
+RootKill.Logitech.Lcd/bin/
+RootKill.Logitech.Lcd/obj/
+*.user
+*.suo
