@@ -189,7 +189,9 @@ namespace RootKill.Logitech.Lcd
         private List<Button> GetActiveButtons()
         {
             var list = new List<Button>();
-            foreach (var item in _buttonStatus) if (item.Value) list.Add(item.Key);
+            foreach (var item in _buttonStatus) 
+                if (item.Value) 
+                    list.Add(item.Key);
             return list;
         }
         #endregion Events: Button
