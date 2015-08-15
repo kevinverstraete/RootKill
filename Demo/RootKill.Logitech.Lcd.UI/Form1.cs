@@ -64,9 +64,10 @@ namespace RootKill.Logitech.Lcd.UI.Demo
                         LcdController.Render(new Bitmap(1, 1));
                     }
             }
-            catch { 
-
-}
+            catch
+            {
+                // Do Nothing
+            }
         }
 
         private void btnLoadPic_Click(object sender, EventArgs e)

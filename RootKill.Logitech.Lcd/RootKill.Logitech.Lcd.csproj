@@ -41,7 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\Api.cs" />
+    <Compile Include="Button.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="LogitechLcdEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
