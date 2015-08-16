@@ -17,8 +17,8 @@ namespace RootKill.Logitech.Lcd
         #endregion Properties: Image
 
         #region Private Members: Device Connection
-        private int _connection = Api.LGLCD_INVALID_CONNECTION;
-        private int _device = Api.LGLCD_INVALID_DEVICE;
+        private int _connection = Api.DMcLgLCD.LGLCD_INVALID_CONNECTION;
+        private int _device = Api.DMcLgLCD.LGLCD_INVALID_DEVICE;
         private Device _deviceType = Device.None;
         #endregion Private Members: Device Connection
 
@@ -37,29 +37,29 @@ namespace RootKill.Logitech.Lcd
         }
         private void CtorConnectDevice()
         {
-            _connection = Api.LGLCD_INVALID_CONNECTION;
-            _device = Api.LGLCD_INVALID_DEVICE;
+            _connection = Api.DMcLgLCD.LGLCD_INVALID_CONNECTION;
+            _device = Api.DMcLgLCD.LGLCD_INVALID_DEVICE;
             _deviceType = Device.None;
             ImageSize = new Size(160, 43);
 
             //Init Lcd Api
-            if (Api.LcdInit() != Api.ERROR_SUCCESS) return;
+            if (Api.DMcLgLCD.LcdInit() != Api.DMcLgLCD.ERROR_SUCCESS) return;
 
             // Make Connection
-            _connection = Api.LcdConnectEx("Rootkill.Lcd.Controller", 0, 0);
-            if (Api.LGLCD_INVALID_CONNECTION == _connection) return;
+            _connection = Api.DMcLgLCD.LcdConnectEx("Rootkill.Lcd.Controller", 0, 0);
+            if (Api.DMcLgLCD.LGLCD_INVALID_CONNECTION == _connection) return;
 
             //Determine Device
-            _device = Api.LcdOpenByType(_connection, Api.LGLCD_DEVICE_QVGA);
-            if (_device != Api.LGLCD_INVALID_DEVICE)
+            _device = Api.DMcLgLCD.LcdOpenByType(_connection, Api.DMcLgLCD.LGLCD_DEVICE_QVGA);
+            if (_device != Api.DMcLgLCD.LGLCD_INVALID_DEVICE)
             {
                 _deviceType = Device.Qvga;
                 ImageSize = new Size(320, 240);
                 _timer.Enabled = true;
                 return;
             }
-            _device = Api.LcdOpenByType(_connection, Api.LGLCD_DEVICE_BW);
-            if (_device != Api.LGLCD_INVALID_DEVICE)
+            _device = Api.DMcLgLCD.LcdOpenByType(_connection, Api.DMcLgLCD.LGLCD_DEVICE_BW);
+            if (_device != Api.DMcLgLCD.LGLCD_INVALID_DEVICE)
             {
                 _deviceType = Device.BlackAndWhite;
                 _timer.Enabled = true;
@@ -73,17 +73,17 @@ namespace RootKill.Logitech.Lcd
 
             _buttonStatus = new Dictionary<Button, bool>();
             _buttonLink = new Dictionary<Button, uint>();
-            CtorAddButtonLink(Button.G13_Button_1, Api.LGLCD_BUTTON_1);
-            CtorAddButtonLink(Button.G13_Button_2, Api.LGLCD_BUTTON_2);
-            CtorAddButtonLink(Button.G13_Button_3, Api.LGLCD_BUTTON_3);
-            CtorAddButtonLink(Button.G13_Button_4, Api.LGLCD_BUTTON_4);
-            CtorAddButtonLink(Button.G19_Button_Left, Api.LGLCD_BUTTON_LEFT);
-            CtorAddButtonLink(Button.G19_Button_Right, Api.LGLCD_BUTTON_RIGHT);
-            CtorAddButtonLink(Button.G19_Button_Ok, Api.LGLCD_BUTTON_OK);
-            CtorAddButtonLink(Button.G19_Button_Cancel, Api.LGLCD_BUTTON_CANCEL);
-            CtorAddButtonLink(Button.G19_Button_Up, Api.LGLCD_BUTTON_UP);
-            CtorAddButtonLink(Button.G19_Button_Down, Api.LGLCD_BUTTON_DOWN);
-            CtorAddButtonLink(Button.G19_Button_Menu, Api.LGLCD_BUTTON_MENU);
+            CtorAddButtonLink(Button.G13_Button_1, Api.DMcLgLCD.LGLCD_BUTTON_1);
+            CtorAddButtonLink(Button.G13_Button_2, Api.DMcLgLCD.LGLCD_BUTTON_2);
+            CtorAddButtonLink(Button.G13_Button_3, Api.DMcLgLCD.LGLCD_BUTTON_3);
+            CtorAddButtonLink(Button.G13_Button_4, Api.DMcLgLCD.LGLCD_BUTTON_4);
+            CtorAddButtonLink(Button.G19_Button_Left, Api.DMcLgLCD.LGLCD_BUTTON_LEFT);
+            CtorAddButtonLink(Button.G19_Button_Right, Api.DMcLgLCD.LGLCD_BUTTON_RIGHT);
+            CtorAddButtonLink(Button.G19_Button_Ok, Api.DMcLgLCD.LGLCD_BUTTON_OK);
+            CtorAddButtonLink(Button.G19_Button_Cancel, Api.DMcLgLCD.LGLCD_BUTTON_CANCEL);
+            CtorAddButtonLink(Button.G19_Button_Up, Api.DMcLgLCD.LGLCD_BUTTON_UP);
+            CtorAddButtonLink(Button.G19_Button_Down, Api.DMcLgLCD.LGLCD_BUTTON_DOWN);
+            CtorAddButtonLink(Button.G19_Button_Menu, Api.DMcLgLCD.LGLCD_BUTTON_MENU);
         }
         private void CtorAddButtonLink(Button button, uint lcdButton)
         {
@@ -114,17 +114,17 @@ namespace RootKill.Logitech.Lcd
                         _timer = null;
                     }
                 }
-                if (_device != Api.LGLCD_INVALID_DEVICE)
+                if (_device != Api.DMcLgLCD.LGLCD_INVALID_DEVICE)
                 {
-                    Api.LcdClose(_device);
-                    _device = Api.LGLCD_INVALID_DEVICE;
+                    Api.DMcLgLCD.LcdClose(_device);
+                    _device = Api.DMcLgLCD.LGLCD_INVALID_DEVICE;
                 }
-                if (_connection != Api.LGLCD_INVALID_CONNECTION)
+                if (_connection != Api.DMcLgLCD.LGLCD_INVALID_CONNECTION)
                 {
-                    Api.LcdDisconnect(_connection);
-                    _connection = Api.LGLCD_INVALID_CONNECTION;
+                    Api.DMcLgLCD.LcdDisconnect(_connection);
+                    _connection = Api.DMcLgLCD.LGLCD_INVALID_CONNECTION;
                 }
-                Api.LcdDeInit();
+                Api.DMcLgLCD.LcdDeInit();
             }
             catch
             {
@@ -152,9 +152,9 @@ namespace RootKill.Logitech.Lcd
                 }
 
                 Bitmap resized = new Bitmap(bitmap, newSize);
-                if (_deviceType == Device.BlackAndWhite) Api.LcdUpdateBitmap(_device, resized.GetHbitmap(), Api.LGLCD_DEVICE_BW);
-                else Api.LcdUpdateBitmap(_device, resized.GetHbitmap(), Api.LGLCD_DEVICE_QVGA);
-                Api.LcdSetAsLCDForegroundApp(_device, Api.LGLCD_FORE_YES);
+                if (_deviceType == Device.BlackAndWhite) Api.DMcLgLCD.LcdUpdateBitmap(_device, resized.GetHbitmap(), Api.DMcLgLCD.LGLCD_DEVICE_BW);
+                else Api.DMcLgLCD.LcdUpdateBitmap(_device, resized.GetHbitmap(), Api.DMcLgLCD.LGLCD_DEVICE_QVGA);
+                Api.DMcLgLCD.LcdSetAsLCDForegroundApp(_device, Api.DMcLgLCD.LGLCD_FORE_YES);
             }
             catch
             {
@@ -199,7 +199,7 @@ namespace RootKill.Logitech.Lcd
         #region Timer: Buttons
         private void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            uint buttons = Api.LcdReadSoftButtons(_device);
+            uint buttons = Api.DMcLgLCD.LcdReadSoftButtons(_device);
             foreach (var item in _buttonLink)
             {
                 CheckButton(buttons, item.Key, item.Value);

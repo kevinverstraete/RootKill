@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace RootKill.Logitech.Lcd
+namespace RootKill.Logitech.Lcd.Api
 {
-    internal static class Api
+    internal static class DMcLgLCD
     {
         // Windows Constants
         public const uint ERROR_SUCCESS = 0;

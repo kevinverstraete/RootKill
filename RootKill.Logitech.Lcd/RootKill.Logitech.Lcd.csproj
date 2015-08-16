@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\Api.cs" />
+    <Compile Include="Api\DMcLgLCD.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Device.cs" />
