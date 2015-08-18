@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using rklcd = RootKill.Component.Logitech.Lcd;
 
-namespace Rootkill.App.SysTray.Apps
+namespace Rootkill.App.SysTray.Apps.LogitechAutoclicker
 {
-    internal class LogitechAutoclicker: IApp
+    internal class Clicker: IApp
     {
         #region IApp
         public void Start()
@@ -87,6 +87,10 @@ namespace Rootkill.App.SysTray.Apps
                 Bitmap b = new Bitmap(Controller.ImageSize.Width, Controller.ImageSize.Height);
                 Graphics g = Graphics.FromImage(b);
                 g.Clear(Color.White);
+                if (_count % 10 > 5 )
+                    g.DrawImage(Icon.Mouse2, new Point(Controller.ImageSize.Width - 28, 0));
+                else
+                    g.DrawImage(Icon.Mouse, new Point(Controller.ImageSize.Width - 28, 0));
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
                 Font sFont = new Font("Arial", 7, FontStyle.Regular);
                 g.DrawString("Clicks To Go: " + (_count <= 0 ? "No Clicks" : _count.ToString()), sFont, SystemBrushes.WindowText, 0, 0);

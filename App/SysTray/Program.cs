@@ -1,9 +1,10 @@
-﻿using Rootkill.App.SysTray.Apps;
+﻿using rka = Rootkill.App.SysTray.Apps;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using Rootkill.App.SysTray.Apps;
 
 namespace Rootkill.App.SysTray
 {
@@ -49,7 +50,7 @@ namespace Rootkill.App.SysTray
             _menuItems = new Dictionary<string, MenuItem>();
 
             // Tray: Define Menu Items
-            CreateMenuItem(TrayItems.LogitechAutoClicker.ToString(), "Logitech AutoClicker", new LogitechAutoclicker());
+            CreateMenuItem(TrayItems.LogitechAutoClicker.ToString(), "Logitech AutoClicker", new rka.LogitechAutoclicker.Clicker());
 
             // Tray: Build Menu
             _trayMenu = new ContextMenu();

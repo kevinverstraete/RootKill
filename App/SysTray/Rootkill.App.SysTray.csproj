@@ -51,11 +51,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Apps\IApp.cs" />
-    <Compile Include="Apps\LogitechAutoclicker.cs" />
+    <Compile Include="Apps\LogitechAutoclicker\Icon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icon.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\LogitechAutoclicker\LogitechAutoclicker.cs" />
     <Compile Include="Program.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Apps\LogitechAutoclicker\Icon.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icon.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -89,6 +98,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apps\LogitechAutoclicker\Resources\Mouse.png" />
+    <Content Include="Apps\LogitechAutoclicker\Resources\Mouse2.png" />
     <Content Include="DataShield.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

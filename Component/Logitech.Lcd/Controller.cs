@@ -46,7 +46,7 @@ namespace RootKill.Component.Logitech.Lcd
             if (Api.DMcLgLCD.LcdInit() != Api.DMcLgLCD.ERROR_SUCCESS) return;
 
             // Make Connection
-            _connection = Api.DMcLgLCD.LcdConnectEx("Rootkill.Lcd.Controller", 0, 0);
+            _connection = Api.DMcLgLCD.LcdConnectEx("Rootkill.Lcd.Controller" + DateTime.Now.ToString(), 0, 0);
             if (Api.DMcLgLCD.LGLCD_INVALID_CONNECTION == _connection) return;
 
             //Determine Device
