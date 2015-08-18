@@ -1,6 +1,10 @@
+App/SysTray/bin/
+App/SysTray/obj/
 Demo/Component/Logitech.Lcd/bin/
 Demo/Component/Logitech.Lcd/obj/
 Component/Logitech.Lcd/bin/
 Component/Logitech.Lcd/obj/
+Icon/IconsLand/bin/
+Icon/IconsLand/obj/
 *.user
 *.suo

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF1D621E-EFBD-420A-A374-5F12A0F70E3A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RootKill.Icon.IconsLand</RootNamespace>
+    <AssemblyName>RootKill.Icon.IconsLand</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Boxes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Boxes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Circles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Circles.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Objects.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Objects.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shields.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shields.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Boxes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Boxes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Circles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Circles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Objects.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Objects.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shields.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Shields.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueShield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenCheckedShield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenShield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreyShield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreyWarningShield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedShield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowShield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueInfoBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueMinimizeBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreyBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrangeBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedCloseBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedShutdownBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueCircle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenCircle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenMinus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreyCircle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpCircle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrangeCircle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedCircle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowCircle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Binoculars.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DrawingPin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DrawingPin2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenFlag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenFlag2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hourglass.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magnifier.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedCancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedDelete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ruler.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowPower.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License.txt" />
+    <None Include="Resources\DataShield.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
