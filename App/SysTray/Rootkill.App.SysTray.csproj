@@ -34,6 +34,9 @@
   <PropertyGroup>
     <StartupObject>Rootkill.App.SysTray.SysTrayApp</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>DataShield.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -84,6 +87,9 @@
       <Project>{bf1d621e-efbd-420a-a374-5f12a0f70e3a}</Project>
       <Name>RootKill.Icon.IconsLand</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataShield.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
