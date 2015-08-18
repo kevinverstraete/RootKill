@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RootKill.Logitech.Lcd.UI.Demo {
+namespace RootKill.Demo.Component.Logitech.Lcd {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace RootKill.Logitech.Lcd.UI.Demo {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RootKill.Logitech.Lcd.UI.Demo.Pics", typeof(Pics).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RootKill.Demo.Component.Logitech.Lcd.Pics", typeof(Pics).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

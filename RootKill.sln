@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootKill.Logitech.Lcd", "RootKill.Logitech.Lcd\RootKill.Logitech.Lcd.csproj", "{FBFC8E68-6A04-43FF-B901-B9108111DE02}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{965677EE-5FEE-4ED6-A4CE-BF43C08EAEB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootKill.Logitech.Lcd.UI.Demo", "Demo\RootKill.Logitech.Lcd.UI\RootKill.Logitech.Lcd.UI.Demo.csproj", "{C40A7CD1-76D8-4208-B5C2-810F6415810A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Component", "Component", "{4B55FE90-C63B-4CBF-9A20-2CA463846077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootKill.Component.Logitech.Lcd", "Component\Logitech.Lcd\RootKill.Component.Logitech.Lcd.csproj", "{FBFC8E68-6A04-43FF-B901-B9108111DE02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Component", "Component", "{A426BE7C-1501-452E-B87A-E0B2AFF33E67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootKill.Demo.Component.Logitech.Lcd", "Demo\Component\Logitech.Lcd\RootKill.Demo.Component.Logitech.Lcd.csproj", "{C40A7CD1-76D8-4208-B5C2-810F6415810A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +32,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C40A7CD1-76D8-4208-B5C2-810F6415810A} = {965677EE-5FEE-4ED6-A4CE-BF43C08EAEB0}
+		{FBFC8E68-6A04-43FF-B901-B9108111DE02} = {4B55FE90-C63B-4CBF-9A20-2CA463846077}
+		{A426BE7C-1501-452E-B87A-E0B2AFF33E67} = {965677EE-5FEE-4ED6-A4CE-BF43C08EAEB0}
+		{C40A7CD1-76D8-4208-B5C2-810F6415810A} = {A426BE7C-1501-452E-B87A-E0B2AFF33E67}
 	EndGlobalSection
 EndGlobal

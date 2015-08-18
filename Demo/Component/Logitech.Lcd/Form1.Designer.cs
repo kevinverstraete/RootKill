@@ -1,4 +1,4 @@
-﻿namespace RootKill.Logitech.Lcd.UI.Demo
+﻿namespace RootKill.Demo.Component.Logitech.Lcd
 {
     partial class Form1
     {

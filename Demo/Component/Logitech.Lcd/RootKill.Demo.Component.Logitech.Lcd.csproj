@@ -7,8 +7,8 @@
     <ProjectGuid>{C40A7CD1-76D8-4208-B5C2-810F6415810A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RootKill.Logitech.Lcd.UI.Demo</RootNamespace>
-    <AssemblyName>RootKill.Logitech.Lcd.UI.Demo</AssemblyName>
+    <RootNamespace>RootKill.Demo.Component.Logitech.Lcd</RootNamespace>
+    <AssemblyName>RootKill.Demo.Component.Logitech.Lcd</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -88,12 +88,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\RootKill.Logitech.Lcd\RootKill.Logitech.Lcd.csproj">
-      <Project>{fbfc8e68-6a04-43ff-b901-b9108111de02}</Project>
-      <Name>RootKill.Logitech.Lcd</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Surf.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Wave.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Component\Logitech.Lcd\RootKill.Component.Logitech.Lcd.csproj">
+      <Project>{fbfc8e68-6a04-43ff-b901-b9108111de02}</Project>
+      <Name>RootKill.Component.Logitech.Lcd</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

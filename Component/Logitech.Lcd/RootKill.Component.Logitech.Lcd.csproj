@@ -7,8 +7,8 @@
     <ProjectGuid>{FBFC8E68-6A04-43FF-B901-B9108111DE02}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RootKill.Logitech.Lcd</RootNamespace>
-    <AssemblyName>RootKill.Logitech.Lcd</AssemblyName>
+    <RootNamespace>RootKill.Component.Logitech.Lcd</RootNamespace>
+    <AssemblyName>RootKill.Component.Logitech.Lcd</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RootKill.Logitech.Lcd.UI.Demo
+namespace RootKill.Demo.Component.Logitech.Lcd
 {
     static class Program
     {

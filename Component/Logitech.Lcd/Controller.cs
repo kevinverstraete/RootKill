@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Timers;
 
-namespace RootKill.Logitech.Lcd
+namespace RootKill.Component.Logitech.Lcd
 {
     public class Controller: IDisposable
     {

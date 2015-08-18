@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RootKill.Logitech.Lcd.UI.Demo.Properties {
+namespace RootKill.Demo.Component.Logitech.Lcd.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

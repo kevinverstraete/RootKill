@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RootKill.Logitech.Lcd
+namespace RootKill.Component.Logitech.Lcd
 {
     public enum Device
     {

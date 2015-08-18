@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace RootKill.Logitech.Lcd.Api
+namespace RootKill.Component.Logitech.Lcd.Api
 {
     internal static class DMcLgLCD
     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rk = RootKill.Component.Logitech.Lcd;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RootKill.Logitech.Lcd.UI.Demo
+namespace RootKill.Demo.Component.Logitech.Lcd
 {
     public partial class Form1 : Form
     {
-        private Lcd.Controller LcdController = new Controller();
+        private rk.Controller LcdController = new rk.Controller();
         private PictureBox picToLoad;
 
         public Form1()
@@ -20,10 +21,10 @@ namespace RootKill.Logitech.Lcd.UI.Demo
             InitializeComponent();
             picToLoad = pic1;
 
-            pic1.Image = RootKill.Logitech.Lcd.UI.Demo.Pics.Wave;
-            pic2.Image = RootKill.Logitech.Lcd.UI.Demo.Pics.DanceBunny;
-            pic3.Image = RootKill.Logitech.Lcd.UI.Demo.Pics.Surf;
-            pic4.Image = RootKill.Logitech.Lcd.UI.Demo.Pics.Loading;
+            pic1.Image = Pics.Wave;
+            pic2.Image = Pics.DanceBunny;
+            pic3.Image = Pics.Surf;
+            pic4.Image = Pics.Loading;
 
             LcdController.ButtonUp += LcdController_ButtonUp;
             LcdController.ButtonDown += LcdController_ButtonDown;
@@ -32,20 +33,20 @@ namespace RootKill.Logitech.Lcd.UI.Demo
 
         void LcdController_ButtonUp(object sender, EventArgs e)
         {
-            var args = (LogitechLcdEventArgs)e;
-            if (args.ActiveButtons.Contains(Button.G13_Button_1)) picToLoad = pic1;
-            else if (args.ActiveButtons.Contains(Button.G13_Button_2)) picToLoad = pic2;
-            else if (args.ActiveButtons.Contains(Button.G13_Button_3)) picToLoad = pic3;
-            else if (args.ActiveButtons.Contains(Button.G13_Button_4)) picToLoad = pic4;
+            var args = (rk.LogitechLcdEventArgs)e;
+            if (args.ActiveButtons.Contains(rk.Button.G13_Button_1)) picToLoad = pic1;
+            else if (args.ActiveButtons.Contains(rk.Button.G13_Button_2)) picToLoad = pic2;
+            else if (args.ActiveButtons.Contains(rk.Button.G13_Button_3)) picToLoad = pic3;
+            else if (args.ActiveButtons.Contains(rk.Button.G13_Button_4)) picToLoad = pic4;
             else picToLoad = pic1;
         }
         void LcdController_ButtonDown(object sender, EventArgs e)
         {
-            var args = (LogitechLcdEventArgs)e;
-            if (args.ActiveButtons.Contains(Button.G13_Button_1)) picToLoad = pic1;
-            else if (args.ActiveButtons.Contains(Button.G13_Button_2)) picToLoad = pic2;
-            else if (args.ActiveButtons.Contains(Button.G13_Button_3)) picToLoad = pic3;
-            else if (args.ActiveButtons.Contains(Button.G13_Button_4)) picToLoad = pic4;
+            var args = (rk.LogitechLcdEventArgs)e;
+            if (args.ActiveButtons.Contains(rk.Button.G13_Button_1)) picToLoad = pic1;
+            else if (args.ActiveButtons.Contains(rk.Button.G13_Button_2)) picToLoad = pic2;
+            else if (args.ActiveButtons.Contains(rk.Button.G13_Button_3)) picToLoad = pic3;
+            else if (args.ActiveButtons.Contains(rk.Button.G13_Button_4)) picToLoad = pic4;
             else picToLoad = pic1;
         }
 
