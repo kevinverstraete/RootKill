@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apps\IApp.cs" />
+    <Compile Include="Apps\LogitechAutoclicker.cs" />
     <Compile Include="Program.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +76,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Component\Logitech.Lcd\RootKill.Component.Logitech.Lcd.csproj">
+      <Project>{fbfc8e68-6a04-43ff-b901-b9108111de02}</Project>
+      <Name>RootKill.Component.Logitech.Lcd</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Icon\IconsLand\RootKill.Icon.IconsLand.csproj">
       <Project>{bf1d621e-efbd-420a-a374-5f12a0f70e3a}</Project>
       <Name>RootKill.Icon.IconsLand</Name>
