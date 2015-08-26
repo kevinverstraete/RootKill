@@ -4,6 +4,10 @@ Demo/Component/Logitech.Lcd/bin/
 Demo/Component/Logitech.Lcd/obj/
 Component/Logitech.Lcd/bin/
 Component/Logitech.Lcd/obj/
+Demo/Component/Screen/bin/
+Demo/Component/Screen/obj/
+Component/Screen/bin/
+Component/Screen/obj/
 Icon/IconsLand/bin/
 Icon/IconsLand/obj/
 *.user
